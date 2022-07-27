@@ -307,4 +307,4 @@ begin{itemize}
 \caption{Text coding and vectorization}
 \end{figure}
 ```
-
+![](https://github.com/MorozovaMilena/Latex_practice/blob/main/ImagesForMdFile/subFigure.png)
