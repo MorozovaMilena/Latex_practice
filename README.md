@@ -97,7 +97,7 @@ LaTEX представляет собой инструмент для созда
 \hline
 &\multicolumn{3}{|c|}{TITLE}\\
 \cline{2-4}
-SMTH&SMTH&SMTH&SMTH\\
+SMTH & SMTH & SMTH & SMTH\\
 \hline
 SMTH& 11 & 21 & 13\\
 SMTH& 21 & 31 &41\\
@@ -106,7 +106,82 @@ SMTH& 21 & 31 &41\\
 \end{center}
 \end{document}
 ```
+
+![](https://github.com/MorozovaMilena/Latex_practice/blob/main/ImagesForMdFile/table.png)
+
+
 Команда **\multicolumn** имеет три обязательных аргумента: первый аргумент указывает количество столбцов, по которым распространяется заголовок; второй аргумент указывает положение заголовка **(l,c,r)** ; а третий аргумент - текст заголовка. Команда **\cline{2-4}** указывает начальный столбец (здесь, 2) и конечный столбец (здесь, 4), над которым должна быть нарисована строка.
+
+
+### Раскрашивание таблиц 
+Существует несколько способов окраски таблиц:
+* *Раскрашивание строк*
+* *Раскрашивание столбцов*
+* *Раскрашивание линий*
+* *Раскрашивание ячеек*
+
+#### Раскрашивание строк
+Для окраски строк используется команда **\rowcolor**, a также пакет **\usepackage[table]{xcolor}**
+
+```sh
+\usepackage[table]{xcolor}
+
+\begin{tabular}{ | c | c | c | }
+  \rowcolor{green}
+  A & B & C \\
+  \rowcolor{red}
+  D & E & F \\
+  G & H & I \\
+  \rowcolor{blue}
+  J & K & L
+ \end{tabular}
+```
+### Рвскрашивание столбцов
+Если мы хотим окрашивать столбцы вместо строк, мы можем сделать это с помощью команды > **{\columncolor {< color >}}** в точке перед установкой параметров выравнивания. 
+ 
+ ```sh
+\usepackage[table]{xcolor}
+
+\begin{tabular}{cc >{\columncolor{green!20}}c}
+    A & B & C \\
+    D & E & F \\
+    G & H & I \\
+\end{tabular}
+```
+
+### Раскрашивание границ таблицы
+Для раскрашивания линий, которые ограничивают нашу таблицу используется команда **\arrayrulecolor**.
+
+```sh
+\usepackage[table]{xcolor}
+\arrayrulecolor{blue}
+
+\begin{tabular}{ | l | l | l | }
+  \hline
+  A & B & C \\
+  \hline
+  D & E & F\\
+  \hline
+  G & H & I \\
+  \hline
+\end{tabular}
+```
+
+### Раскрашивание ячеек
+Для добавления цвета только в одну ячейку используется команда **\cellcolor {< color >}**, которую необходимо поместить в ячейку.
+
+```sh
+\usepackage[table]{xcolor}
+
+\begin{tabular}{|c|c|}
+    \hline
+    \cellcolor{purple!30}A & \cellcolor{pink!60}B \\
+    \hline
+    \cellcolor{red!40}C & \cellcolor{orange!50}D \\
+    \hline
+\end{tabular}
+```
+
 
 ## Работа со списками
 Простой список задается окружением **{itemize}**. Каждый элемент списка задается командой **\item** Текст.
@@ -117,6 +192,8 @@ begin{itemize}
 	\item The third item
 \end{itemize}
 ```
+![](https://github.com/MorozovaMilena/Latex_practice/blob/main/ImagesForMdFile/unmarkedList.png)
+
 Кроме маркированного списка, можно формировать списки, элементы которых пронумерованы. Нумерация производится автоматически. Для этого служит окружение **{enumerate}**. Элементы нумерованного списка могут быть также вложенными, причем допускается до 5 уровней вложенности.
 ```sh
 \begin{enumerate}
@@ -140,4 +217,4 @@ begin{itemize}
 		\item The third etc \ldots
 \end{enumerate}
 ```
-![Результат](https://github.com/MorozovaMilena/Latex_practice/blob/main/ImagesForMdFile/nestedItem.png)
+![](https://github.com/MorozovaMilena/Latex_practice/blob/main/ImagesForMdFile/nestedItem.png)
