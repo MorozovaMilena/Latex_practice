@@ -136,6 +136,8 @@ SMTH& 21 & 31 &41\\
   J & K & L
  \end{tabular}
 ```
+![](https://github.com/MorozovaMilena/Latex_practice/blob/main/ImagesForMdFile/rowColor.png)
+
 ### Рвскрашивание столбцов
 Если мы хотим окрашивать столбцы вместо строк, мы можем сделать это с помощью команды > **{\columncolor {< color >}}** в точке перед установкой параметров выравнивания. 
  
@@ -148,6 +150,7 @@ SMTH& 21 & 31 &41\\
     G & H & I \\
 \end{tabular}
 ```
+![](https://github.com/MorozovaMilena/Latex_practice/blob/main/ImagesForMdFile/columnColor.png)
 
 ### Раскрашивание границ таблицы
 Для раскрашивания линий, которые ограничивают нашу таблицу используется команда **\arrayrulecolor**.
@@ -166,6 +169,8 @@ SMTH& 21 & 31 &41\\
   \hline
 \end{tabular}
 ```
+![](https://github.com/MorozovaMilena/Latex_practice/blob/main/ImagesForMdFile/lineColor.png)
+
 
 ### Раскрашивание ячеек
 Для добавления цвета только в одну ячейку используется команда **\cellcolor {< color >}**, которую необходимо поместить в ячейку.
@@ -181,6 +186,7 @@ SMTH& 21 & 31 &41\\
     \hline
 \end{tabular}
 ```
+![](https://github.com/MorozovaMilena/Latex_practice/blob/main/ImagesForMdFile/cellColor.png)
 
 
 ## Работа со списками
