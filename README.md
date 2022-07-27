@@ -246,9 +246,11 @@ begin{itemize}
 ```sh
 \begin{equation}
   \begin{align}
-   formula & 1    &        formula & 2 \notag \\
-   formula & 3    &        formula & 4
+   formula & 1    &   formula & 2 \notag \\
+   formula & 3    &   formula & 4
 \end{align}
 
 \end{equation}
 ```
+### Примеры
+
